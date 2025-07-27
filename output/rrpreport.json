@@ -1,0 +1,315 @@
+{
+  "title": "Microsoft Word - project_(1)[1][1",
+  "outline": [
+    {
+      "level": "H2",
+      "text": "HOSTEL ROOM ALLOTMENT SYSTEM",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "A Real Time Project report submitted in partial fulfilment of the",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "requirements for the award of the degree of",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Bachelor of Technology",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Computer Science and Engineering",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "ANNADI CHANDANA (23011A0516)",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "KARLAKUNTA AKSHARA (23011A0544)",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "SUCHITRA DAS (23011A0566)",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Under The Guidance of",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Dr. K P SUPREETHI",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Professor & Head of the Department",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Department of Computer Science and Engineering,",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "JNTUH University College of Engineering, Science &Technology",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Hyderabad",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Kukatpally, Hyderabad - 500 085.",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "July 2025",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Department of Computer Science and Engineering,",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "JNTUH University College of Engineering, Science &Technology",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Hyderabad",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Kukatpally, Hyderabad - 500 085.",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "July 2025",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "DECLARATION BY THE CANDIDATE",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Date:",
+      "page": 2
+    },
+    {
+      "level": "H2",
+      "text": "Department of Computer Science and Engineering,",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "JNTUH University College of Engineering, Science &Technology",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Hyderabad",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Kukatpally, Hyderabad - 500 085.",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "July 2025",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "CERTIFICATE BY THE SUPERVISOR",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "DR. K P SUPREETHI",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Date:",
+      "page": 3
+    },
+    {
+      "level": "H2",
+      "text": "Department of Computer Science and Engineering,",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "JNTUH University College of Engineering, Science &Technology",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "Hyderabad",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "Kukatpally, Hyderabad - 500 085.",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "July 2025",
+      "page": 4
+    },
+    {
+      "level": "H2",
+      "text": "CERTIFICATE BY THE HEAD OF THE DEPARTMENT",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "TABLE OF CONTENTS",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "LIST OF FIGURES AND SCREENSHOTS",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "LIST OF TABLES:",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "ACKNOWLEDGEMENTS",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "ABSTRACT",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "INTRODUCTION",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "1.3 OBJECTIVES:",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "1.4    PURPOSE AND SIGNIFICANCE:",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "LITERATURE SURVEY",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "2.1",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "EXISTING SYSTEM:",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "SYSTEM REQUIREMENTS",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "SYSTEM DESIGN AND METHODOLOGY",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Fig 4.1: System Architecture Overview",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "IMPLEMENTATION AND RESULTS",
+      "page": 26
+    },
+    {
+      "level": "H3",
+      "text": "5.1",
+      "page": 26
+    },
+    {
+      "level": "H3",
+      "text": "IMPLEMENTED FEATURES:",
+      "page": 26
+    },
+    {
+      "level": "H3",
+      "text": "5.2",
+      "page": 37
+    },
+    {
+      "level": "H3",
+      "text": "RESULTS:",
+      "page": 37
+    },
+    {
+      "level": "H2",
+      "text": "6.CONCLUSION AND FUTURE SCOPE",
+      "page": 47
+    },
+    {
+      "level": "H3",
+      "text": "6.1 CONCLUSION",
+      "page": 47
+    },
+    {
+      "level": "H3",
+      "text": "6.3 .",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "FUTURE SCOPE",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "REFERENCES:",
+      "page": 49
+    },
+    {
+      "level": "H3",
+      "text": "The References that we used throughout this project:",
+      "page": 49
+    }
+  ]
+}

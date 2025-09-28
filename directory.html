@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory - Dream Team</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8fafc;
+}
+.navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e40af;
+}
+.nav-brand i {
+    font-size: 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1e40af;
+    background-color: #f1f5f9;
+}
+
+.nav-link.active {
+    color: #1e40af;
+    background-color: #dbeafe;
+}
+.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #0d9488 100%);
+    color: white;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: #fbbf24;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #1e40af;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #1e40af;
+    border: 2px solid #1e40af;
+}
+
+.btn-secondary:hover {
+    background-color: #dbeafe;
+}
+
+.btn-linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.btn-linkedin:hover {
+    background-color: #005885;
+}
+.features {
+    background: #f8fafc;
+    padding: 80px 24px;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.features-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #1f2937;
+}
+
+.features-header p {
+    font-size: 1.125rem;
+    color: #64748b;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.feature-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #dbeafe;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.feature-icon i {
+    font-size: 24px;
+    color: #1e40af;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1f2937;
+}
+
+.feature-card p {
+    color: #64748b;
+}
+
+.featured-alumni {
+    background: white;
+    padding: 80px 24px;
+}
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.featured-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #1f2937;
+}
+
+.featured-header p {
+    font-size: 1.125rem;
+    color: #64748b;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.alumni-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+}
+
+.alumni-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.alumni-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.alumni-info {
+    padding: 24px;
+}
+
+.alumni-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.position {
+    color: #1e40af;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.batch {
+    color: #0d9488;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+.alumni-links a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.alumni-links a:hover {
+    color: #1e3a8a;
+}
+.directory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+.directory-header {
+    margin-bottom: 32px;
+}
+
+.directory-header h1 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.directory-header p {
+    color: #64748b;
+    font-size: 1.125rem;
+}
+
+.search-section {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 32px;
+}
+
+.search-bar {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 16px 16px 16px 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-toggle {
+    background: #f8fafc;
+    border: 1px solid #d1d5db;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.filter-toggle:hover {
+    background: #e2e8f0;
+}
+
+.clear-filters {
+    color: #1e40af;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.filter-section {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+}
+
+.results-count {
+    margin-bottom: 24px;
+}
+
+.results-count p {
+    color: #64748b;
+}
+
+.no-results {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.no-results-icon {
+    width: 96px;
+    height: 96px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.no-results-icon i {
+    font-size: 32px;
+    color: #9ca3af;
+}
+
+.no-results h3 {
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: #64748b;
+}
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 32px;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #1e3a8a;
+}
+
+.profile-header {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 32px;
+}
+
+.profile-cover {
+    height: 128px;
+    background: linear-gradient(135deg, #1e40af 0%, #0d9488 100%);
+}
+
+.profile-info {
+    padding: 0 32px 32px;
+    position: relative;
+}
+
+.profile-main {
+    display: flex;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-image {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: -64px;
+    object-fit: cover;
+}
+
+.profile-details h1 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.profile-details p {
+    margin-bottom: 4px;
+}
+
+.profile-details p:first-of-type {
+    color: #1e40af;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.profile-details p:nth-of-type(2) {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.profile-meta {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.profile-body {
+    display: grid;
+    gap: 32px;
+}
+
+.profile-section {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1f2937;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+}
+
+.profile-section h2 i {
+    color: #1e40af;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #dcfce7;
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.form-header h1 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.form-header p {
+    color: #64748b;
+    font-size: 1.125rem;
+}
+
+.alumni-form {
+    background: white;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-section {
+    margin-bottom: 48px;
+}
+
+.form-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1f2937;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.form-section h2 i {
+    color: #1e40af;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.form-group small {
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 48px;
+    max-width: 500px;
+    margin: 24px;
+    text-align: center;
+}
+
+.modal-header {
+    margin-bottom: 24px;
+}
+
+.modal-header i {
+    font-size: 64px;
+    color: #10b981;
+    margin-bottom: 16px;
+}
+
+.modal-header h2 {
+    font-size: 1.75rem;
+    color: #1f2937;
+}
+
+.modal-body {
+    margin-bottom: 32px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.modal-body p {
+    margin-bottom: 16px;
+}
+.hero-content h1 {
+    position: relative;
+}
+
+.hero-content h1::after {
+    content: "Our Alumni Network";
+    display: block;
+    font-size: 1.2rem;
+    font-weight: normal;
+    opacity: 0.8;
+    margin-top: 8px;
+}
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 16px;
+    }
+    
+    .nav-links {
+        gap: 16px;
+    }
+    
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .alumni-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .alumni-form {
+        padding: 24px;
+    }
+    
+    .profile-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image {
+        margin-top: -64px;
+    }
+    
+    .profile-actions {
+        justify-content: center;
+    }
+    
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+    
+    .modal-content {
+        margin: 16px;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .directory-container,
+    .profile-container,
+    .form-container {
+        padding: 16px;
+    }
+    
+    .search-section {
+        padding: 20px;
+    }
+    
+    .profile-info {
+        padding: 0 20px 20px;
+    }
+    
+    .profile-section {
+        padding: 20px;
+    }
+    
+    .alumni-form {
+        padding: 20px;
+    }
+}
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-users"></i>
+                <span>Dream Team</span>
+            </div>
+            <div class="nav-links">
+                <a href="navi.html" class="nav-link">Home</a>
+                <a href="directory.html" class="nav-link active">Alumni Directory</a>
+                <a href="addalumni.html" class="nav-link">Add Alumni</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Directory Content -->
+    <div class="directory-container">
+        <div class="directory-header">
+            <h1>Our Alumni Directory</h1>
+            <p>Connect with our amazing alumni</p>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="search-section">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search by name...">
+            </div>
+            
+            <div class="filters">
+                <button class="filter-toggle" onclick="toggleFilters()">
+                    <i class="fas fa-filter"></i>
+                    Filters
+                </button>
+                <button class="clear-filters" onclick="clearFilters()" id="clear-btn" style="display: none;">
+                    Clear Filters
+                </button>
+            </div>
+
+            <div class="filter-section" id="filter-section" style="display: none;">
+                <div class="filter-group">
+                    <label for="department-filter">Department</label>
+                    <select id="department-filter">
+                        <option value="">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="batch-filter">Batch Year</label>
+                    <select id="batch-filter">
+                        <option value="">All Years</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="results-count">
+            <p>Showing <span id="results-count">6</span> of <span id="total-alumni">6</span> our alumni</p>
+        </div>
+        <div class="alumni-grid" id="alumni-grid">
+        <div class="no-results" id="no-results" style="display: none;">
+            <div class="no-results-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <h3>No one found</h3>
+            <p>Try adjusting your search criteria or filters.</p>
+        </div>
+    </div>
+
+    <script>
+const alumniData = [
+    {
+        id: '1',
+        name: 'Sarah Johnson',
+        email: 'sarah.johnson@email.com',
+        linkedinId: 'sarah-johnson-tech',
+        department: 'Computer Science',
+        batch: 2019,
+        skills: ['React', 'Python', 'Machine Learning', 'Leadership'],
+        profileImage: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300',
+        joinedDate: '2023-01-15'
+    },
+    {
+        id: '2',
+        name: 'Michael Chen',
+        email: 'michael.chen@email.com',
+        linkedinId: 'michael-chen-finance',
+        department: 'Business Administration',
+        batch: 2018,    
+        skills: ['Financial Analysis', 'Data Analytics', 'Risk Management', 'Excel'],
+        profileImage: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300',
+        joinedDate: '2023-02-20'
+    },
+    {
+        id: '3',
+        name: 'Emily Rodriguez',
+        email: 'emily.rodriguez@email.com',
+        linkedinId: 'emily-rodriguez-design',
+        department: 'computer science',
+        batch: 2020,
+        skills: ['UI/UX Design', 'Figma', 'User Research', 'Prototyping'],
+        profileImage: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=300',
+        joinedDate: '2023-03-10'
+    },
+    {
+        id: '4',
+        name: 'David Park',
+        email: 'david.park@email.com',
+        linkedinId: 'david-park-marketing',
+        department: 'Marketing',
+        batch: 2017,
+        skills: ['Digital Marketing', 'Brand Strategy', 'Analytics', 'Content Creation'],
+        profileImage: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300',
+        joinedDate: '2023-01-25'
+    },
+    {
+        id: '5',
+        name: 'Lisa Thompson',
+        email: 'lisa.thompson@email.com',
+        linkedinId: 'lisa-thompson-engineering',
+        department: 'Mechanical Engineering',
+        batch: 2019,
+        skills: ['CAD Design', 'Project Management', 'Manufacturing', 'Sustainability'],
+        profileImage: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300',
+        joinedDate: '2023-04-05'
+    },
+    {
+        id: '6',
+        name: 'Robert Kim',
+        email: 'robert.kim@email.com',
+        linkedinId: 'robert-kim-data',
+        department: 'Computer Science',
+        batch: 2021,
+        skills: ['Python', 'SQL', 'Machine Learning', 'Statistics'],
+        profileImage: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300',
+        joinedDate: '2023-05-12'
+    }
+];
+
+let filteredAlumni = [...alumniData];
+let showingFilters = false;
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+    renderAlumni(filteredAlumni);
+    setupEventListeners();
+    updateCounts();
+});
+
+function setupEventListeners() {
+    // Search input
+    document.getElementById('search-input').addEventListener('input', handleSearch);
+    
+    // Filter selects
+    document.getElementById('department-filter').addEventListener('change', handleFilter);
+    document.getElementById('batch-filter').addEventListener('change', handleFilter);
+}
+
+function handleSearch() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const departmentFilter = document.getElementById('department-filter').value;
+    const batchFilter = document.getElementById('batch-filter').value;
+    
+    filteredAlumni = alumniData.filter(alumni => {
+        const nameMatch = alumni.name.toLowerCase().includes(searchTerm);
+        const deptMatch = !departmentFilter || alumni.department === departmentFilter;
+        const batchMatch = !batchFilter || alumni.batch.toString() === batchFilter;
+        
+        return nameMatch && deptMatch && batchMatch;
+    });
+    
+    renderAlumni(filteredAlumni);
+    updateCounts();
+}
+
+function handleFilter() {
+    handleSearch(); // Reuse search logic with filters
+    
+    const departmentFilter = document.getElementById('department-filter').value;
+    const batchFilter = document.getElementById('batch-filter').value;
+    const clearBtn = document.getElementById('clear-btn');
+    
+    if (departmentFilter || batchFilter) {
+        clearBtn.style.display = 'block';
+    } else {
+        clearBtn.style.display = 'none';
+    }
+}
+
+function renderAlumni(alumni) {
+    const grid = document.getElementById('alumni-grid');
+    const noResults = document.getElementById('no-results');
+    
+    if (alumni.length === 0) {
+        grid.style.display = 'none';
+        noResults.style.display = 'block';
+        return;
+    }
+    
+    grid.style.display = 'grid';
+    noResults.style.display = 'none';
+    
+    grid.innerHTML = alumni.map(alumni => `
+        <div class="alumni-card" onclick="viewProfile('${alumni.id}')">
+            <img src="${alumni.profileImage}" alt="${alumni.name}">
+            <div class="alumni-info">
+                <h3>${alumni.name}</h3>
+                <div class="alumni-meta">
+                    <span><i class="fas fa-user"></i> ${alumni.department} • Class of ${alumni.batch}</span>
+                </div>
+                <div class="alumni-actions">
+                    <a href="https://linkedin.com/in/${alumni.linkedinId}" target="_blank" onclick="event.stopPropagation()">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:${alumni.email}" onclick="event.stopPropagation()">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <button class="view-profile">View Profile</button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function updateCounts() {
+    document.getElementById('results-count').textContent = filteredAlumni.length;
+    document.getElementById('total-alumni').textContent = alumniData.length;
+    document.getElementById('total-count').textContent = `${alumniData.length}`;
+}
+
+function toggleFilters() {
+    const filterSection = document.getElementById('filter-section');
+    showingFilters = !showingFilters;
+    
+    if (showingFilters) {
+        filterSection.style.display = 'block';
+    } else {
+        filterSection.style.display = 'none';
+    }
+}
+
+function clearFilters() {
+    document.getElementById('search-input').value = '';
+    document.getElementById('department-filter').value = '';
+    document.getElementById('batch-filter').value = '';
+    document.getElementById('clear-btn').style.display = 'none';
+    
+    filteredAlumni = [...alumniData];
+    renderAlumni(filteredAlumni);
+    updateCounts();
+}
+
+function viewProfile(alumniId) {
+    // Store the alumni data in localStorage for the profile page
+    const alumni = alumniData.find(a => a.id === alumniId);
+    localStorage.setItem('selectedAlumni', JSON.stringify(alumni));
+    
+    // Navigate to profile page
+    window.location.href = 'profile.html';
+}
+
+// Add styles for the alumni cards
+const additionalCSS = `
+.alumni-card {
+    transition: all 0.3s ease;
+}
+
+.alumni-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.alumni-info {
+    padding: 24px;
+}
+
+.alumni-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.position {
+    color: #1e40af;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.company {
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.alumni-meta,
+.alumni-location {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.alumni-meta i,
+.alumni-location i {
+    color: #9ca3af;
+    width: 16px;
+}
+
+.skills-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0;
+}
+
+.skill-tag {
+    background: #dcfce7;
+    color: #166534;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.alumni-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.alumni-actions a {
+    color: #1e40af;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease;
+}
+
+.alumni-actions a:hover {
+    color: #1e3a8a;
+}
+
+.view-profile {
+    background: none;
+    border: none;
+    color: #1e40af;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.view-profile:hover {
+    color: #1e3a8a;
+}
+`;
+
+// Inject additional CSS
+const style = document.createElement('style');
+style.textContent = additionalCSS;
+document.head.appendChild(style);
+    </script>
+</body>
+</html>
